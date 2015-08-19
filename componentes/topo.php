@@ -32,3 +32,5 @@ require_once 'config/config.php';
 	</div>	
 </nav>
 <nav class="navbar"></nav>
+
+<div class="container-fluid">

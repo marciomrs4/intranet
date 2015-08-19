@@ -2,10 +2,8 @@
     include_once 'componentes/topo.php';
 ?>
     <div class="container">        
-        <br>
-        <div class="jumbotron">
-                       
-            <div class="panel panel-primary">
+        
+        <div class="panel panel-primary">
             	<div class="panel-heading">
                     <h3 class="panel-title"><span class="glyphicon glyphicon-wrench"></span> ADMINISTRAÇÃO DE SLIDES - INTRANET CEADIS</h3>
 		    	</div>
@@ -19,8 +17,10 @@
                         <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-saved"></span> Salvar</button>
                     </form> 
                 </div>
-            </div>           
-            
+            </div>
+        
+        <div class="jumbotron">
+                                                          
             <div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title"><span class="glyphicon glyphicon-picture"></span> SLIDES ATIVOS</h3>

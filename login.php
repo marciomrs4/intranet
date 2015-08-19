@@ -1,14 +1,6 @@
 <?php
 session_start();
-
-//Simples validação de usuario e senha
-//$login = wellington;
-//$senha = 123;
-//if(isset($_POST)){
-//if ($login == $_POST['usuario'] && $senha == $_POST['senha']){
-//    header("Location: gi.php");
-//}  else{
-//    
+    
     if($_POST){
         
     $usuario = $_POST['usuario'];
@@ -21,11 +13,12 @@ session_start();
     
             if(in_array($needle, $haystack)){
 
-                //header('Location: gi.php');
-                $erro = 'Usuário Encontrado';
+                header('Location: gi.php');
+                //$erro = 'Usuário Encontrado';
 
-            }  else {                
-                header('Location: login.php');
+            }  else { 
+                $erro = 'Usuário não Encontrado';
+                //header('Location: login.php');
         }
     
     }
@@ -37,7 +30,6 @@ session_start();
 <meta charset="UTF-8">
 <title>GESTÃO DE IMAGENS INTRANET</title>
 <link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/gi.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel='shortcut icon' href='img/ceadisico.ico'>
 </head>
@@ -45,11 +37,18 @@ session_start();
 <body>
     
     <div class="container">
-        <div class="col-sm-10"> 
+        <div class="col-sm-5 col-sm-offset-3"> 
             <br>
-            <form class="col-sm-5 col-sm-offset-4" method="post"> 
+            <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title"><span class="glyphicon glyphicon-lock"></span> LOGIN</h3>
+        </div>
+        <div class="panel-body">
+            
+            
+            <form method="post"> 
                                                 
-                <h3 class="text-info"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Usuário e Senha:</h3>                
+                <h3 class="text-info">Usuário e Senha:</h3>                
                 <div class="form-group">                    
                     <input type="text" class="form-control" id="usuario" placeholder="Usuário" name="usuario" required>
                 </div>
@@ -62,11 +61,16 @@ session_start();
                 <span><?php echo $erro; ?></span>
                 <br>
                 <br>
-                <p class="text-warning">Tecnologia da Informação - <?php echo date(Y);?></p>
-            </form>
                 
+            </form>
+              
         </div>
-    </div>
+               <div class="panel-footer"><span class="text-warning">Tecnologia da Informação - <?php echo date(Y);?></span></div> 
+            </div>        
+        </div>
+            
+        </div>
+    
     
 </body>       
 </html>
