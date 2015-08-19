@@ -12,7 +12,7 @@
 				<div class="panel-body">
 					<ul class="list-unstyled">
 					<?php 
-					include_once 'links.php';					
+						include_once 'links.php';					
 					?>
 					</ul>
 				</div>
@@ -50,15 +50,12 @@
 				foreach ($tbAniversariante->listAniversarianteDia() as $valor):
 				
 					echo '<span class="estiloniver">' . $valor['0'] . ' | ', 
-						 $valor['1']  . '<br />' . '<hr>' . '</span>';
-				
-				endforeach;						
+						 $valor['1']  . '<br />' . '<hr>' . '</span>';						 
+				endforeach;										
 				
                                 if ($valor <= 0){
                                     echo  '<span class="estiloniver"> <span class="glyphicon glyphicon-exclamation-sign"></span> Não há aniversariantes hoje </span>';
-                                }
-                                    
-                                
+                                }                                                                    
 				?>
 				
 	
