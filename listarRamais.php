@@ -13,7 +13,7 @@
 					</div>
 				<div class="panel-body">
 			<?php
-			$tbUsuario = new TbUsuario();
+			$tbUsuario = new app\model\TbUsuario();
 			
 			$table = new app\Grid();
 			

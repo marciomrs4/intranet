@@ -2,11 +2,8 @@
 <hr>
 
 <?php
-$ID = base64_encode(date('d-m-Y') . 'M');
-$Uniddade = '1';
-//$Host = 'localhost';
-$Host = '187.62.217.158:2460';
-$RemoteUrl = 'http://' . $Host . '/sga/services/aniversariantesdodia.php?id=' . $ID . '&unidade=' . $Uniddade;
+
+$RemoteUrl = 'http://' . Host . '/sga/services/aniversariantesdodia.php?id=' . ID . '&unidade=' . Unidade;
 
 $dados = file_get_contents($RemoteUrl);
 

@@ -13,12 +13,7 @@ include 'paineis.php';
             </div>
             <div class="panel-body">
                 <?php
-                $ID = base64_encode(date('d-m-Y') . 'M');
-                $Unidade = '1';
-                //$Host = 'localhost';
-                $Host = '187.62.217.158:2460';
-
-                $RemoteUrl = 'http://' . $Host . '/sga/services/listadeaniversariante.php?id=' . $ID . '&unidade=' . $Unidade;
+                $RemoteUrl = 'http://' . Host . '/sga/services/listadeaniversariante.php?id=' . ID . '&unidade=' . Unidade;
 
                 $dados = file_get_contents($RemoteUrl);
 
