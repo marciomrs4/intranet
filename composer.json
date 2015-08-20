@@ -1,0 +1,19 @@
+{
+    "name": "udtp/intranet",
+    "description": "Intranet Enterprise",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tecnologia ceadis",
+            "email": "tecnologia@ceadis.org.br"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+  
+    "autoload": {
+            "psr-0": {
+                  "app\\": "src/"
+        }
+    }
+}

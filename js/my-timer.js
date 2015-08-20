@@ -7,7 +7,7 @@
      
      m=checkTime(m);
      s=checkTime(s);
-     document.getElementById('timer').innerHTML=h+":"+m+":"+s;
+     return h+":"+m+":"+s;
      t=setTimeout('startTime()',500);
  }
 
@@ -17,3 +17,9 @@
  }
      return i;
  }
+
+$timer = jQuery().noConflict();
+
+$timer(document).ready(function(){
+    $timer('#timer').html(startTime());
+});

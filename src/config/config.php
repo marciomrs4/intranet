@@ -5,14 +5,9 @@
  */
 session_start();
 
-error_reporting(~E_ALL);
-
-
-$_SESSION['projeto'] = 'sga';
-
-require_once "autoload.php";
+//error_reporting(~E_ALL);
 
 date_default_timezone_set('America/Sao_Paulo');
 
-
+define('DIR_FOTO', '../../img/slides/');
 ?>

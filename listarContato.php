@@ -13,16 +13,13 @@ include 'paineis.php';
             </div>
             <div class="panel-body">
                 <?php
-                $Grid = new Grid();
+                $Grid = new app\Grid();
 
-                $array;
-                foreach (file('./arquivos/ContatosHospitais.csv') as $dados) {
-                    $array[] = explode(';', $dados);
-                }
+                $readfile = new \app\ReadCsv();
+                $readfile->readFileCsv('./arquivos/ContatosHospitais.csv');
 
-
-                $Grid->setCabecalho(array('Hospital', 'Responsável', 'Telefone'));
-                $Grid->setDados($array);
+                $Grid->setCabecalho($readfile->getColumn());
+                $Grid->setDados($readfile->getLines());
 
                 $Grid->show();
                 ?>

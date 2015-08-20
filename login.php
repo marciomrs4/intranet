@@ -12,7 +12,7 @@ session_start();
     $haystack = $usuarios;
     
             if(in_array($needle, $haystack)){
-
+                $_SESSION['permissao_gi'] = $needle;        
                 header('Location: gi.php');
                 //$erro = 'Usuário Encontrado';
 

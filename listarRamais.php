@@ -15,7 +15,7 @@
 			<?php
 			$tbUsuario = new TbUsuario();
 			
-			$table = new Grid();
+			$table = new app\Grid();
 			
 			$table->setCabecalho(array('Nome','Ramal','E-mail','Departamento'));
 			

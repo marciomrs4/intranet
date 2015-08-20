@@ -15,8 +15,8 @@ include 'paineis.php';
                 <?php
                 $ID = base64_encode(date('d-m-Y') . 'M');
                 $Unidade = '1';
-                $Host = 'localhost';
-                //$Host = '172.22.0.30';
+                //$Host = 'localhost';
+                $Host = '187.62.217.158:2460';
 
                 $RemoteUrl = 'http://' . $Host . '/sga/services/listadeaniversariante.php?id=' . $ID . '&unidade=' . $Unidade;
 
@@ -25,7 +25,7 @@ include 'paineis.php';
                 $dados = json_decode($dados);
 
 
-                $table = new Grid();
+                $table = new app\Grid();
 
                 $table->setCabecalho(array('Dia', 'Nome', 'Departamento'));
 

@@ -1,6 +1,7 @@
 
 <?php 
-require_once 'config/config.php';
+require_once 'src/config/config.php';
+require_once 'vendor/autoload.php';
 ?>
 <!doctype html>
 <html>
@@ -12,7 +13,7 @@ require_once 'config/config.php';
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel='shortcut icon' href='img/ceadisico.ico'>
 </head>
-<body onload="startTime()">
+<body>
     
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="navbar-header">

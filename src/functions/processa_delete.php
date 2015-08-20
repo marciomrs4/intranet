@@ -1,9 +1,5 @@
 <?php
-
-session_start();
-
-require_once "config.php";
-require_once "funcoes.php";
+require_once '../config/config.php';
 
 // Remove a imagem da pasta slides    
 $file = filter_input(INPUT_GET, 'file');
@@ -11,9 +7,9 @@ $file = filter_input(INPUT_GET, 'file');
 
   if( is_file(DIR_FOTO.$file) ) {        
         unlink(DIR_FOTO.$file);        
-        header('Location: ../gi.php');
+        header('location: ' . $_SERVER['HTTP_REFERER']);
     }    
-    header('Location: ../gi.php');
+    header('location: ' . $_SERVER['HTTP_REFERER']);
 
 ?>
 

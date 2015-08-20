@@ -1,6 +1,4 @@
 <?php
-
- //Função para o Upload da imagem
  
 function uploadFoto($arquivo, $novo_nome) {
 
