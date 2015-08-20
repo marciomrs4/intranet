@@ -46,7 +46,7 @@ session_start();
         <div class="panel-body">
             
             
-            <form method="post"> 
+            <form method="post" action="gi.php"> 
                                                 
                 <h3 class="text-info">Usuário e Senha:</h3>                
                 <div class="form-group">                    

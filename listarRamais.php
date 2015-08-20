@@ -1,5 +1,5 @@
 <?php
-    include 'componentes/topo.php';
+    include_once 'componentes/topo.php';
     include_once 'paineis.php';
 ?>
 

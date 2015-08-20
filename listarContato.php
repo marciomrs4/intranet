@@ -1,6 +1,6 @@
 <?php
-include 'componentes/topo.php';
-include 'paineis.php';
+include_once 'componentes/topo.php';
+include_once 'paineis.php';
 ?>
 
 <div class="container col-sm-9">
@@ -34,6 +34,6 @@ include 'paineis.php';
 
 
 <?php
-include 'componentes/footer.php';
+include_once 'componentes/footer.php';
 ?>
 
