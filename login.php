@@ -2,19 +2,22 @@
 session_start();
     
     if($_POST){
-        
-    $usuario = $_POST['usuario'];
-    
-    $needle = $usuario;
-    
-    $usuarios = array('marcio','camila','wellington','jessica');
-    
-    $haystack = $usuarios;
-    
+
+    $needle = filter_var($_POST['usuario'],FILTER_SANITIZE_STRING);
+    $haystack = array('marcio','camila','wellington','jessica');
+
+    $needleSenha = filter_var($_POST['senha'],FILTER_SANITIZE_STRING);
+    $haystackSenha = array('@ceadisIntranet','@udtpIntranet');
+
             if(in_array($needle, $haystack)){
-                $_SESSION['permissao_gi'] = $needle;        
-                header('Location: gi.php');
-                //$erro = 'Usuário Encontrado';
+
+                if(in_array($needleSenha,$haystackSenha)) {
+                    $_SESSION['permissao_gi'] = $needle;
+                    header('Location: gi.php');
+                    //$erro = 'Usuário Encontrado';
+                }else{
+                    $erro = 'Senha incorreta';
+                }
 
             }  else { 
                 $erro = 'Usuário não Encontrado';
@@ -22,6 +25,8 @@ session_start();
         }
     
     }
+
+
 ?>
 
 <!DOCTYPE HTML>
